@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OpenImg.cpp">
+    <ClCompile Include="CLManip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
