@@ -9,6 +9,7 @@ References:
 
 A. Hertzmann, Painterly rendering with curved brush strokes of multiple sizes, SIGGRAPH 1998.
 Winnemoller, H., XDoG: advanced image stylization with eXtended Difference-of-Gaussians NPAR 2011
+XDoG: An eXtended Difference-of-Gaussians Compendium including Advanced Image Stylization
 
 Ideas:
     Scale into a single color intensity scale instead of just a gray-scale

@@ -1,6 +1,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <opencv\cv.h>
+#include <opencv/cv.h>
+#include <opencv2/imgproc/imgproc.hpp>
 
 #include <iostream>
 #include <cstring>
@@ -52,6 +53,27 @@ Mat openImage(char* fname)
 void saveImage(Mat image, char* fname)
 {
 	imwrite(fname, image);
+}
+
+void saveCombinedImage(Mat img1, Mat img2, Mat img3)
+{
+	cvtColor(img2, img2, CV_GRAY2BGR);
+	cvtColor(img3, img3, CV_GRAY2BGR);
+
+	Mat final(img1.rows, 3*img1.cols, img1.type());
+	Mat roiImgLeft		= final(Rect(0,0,img1.cols,img1.rows));
+	Mat roiImgCenter	= final(Rect(img1.cols,0,img2.cols,img2.rows));
+	Mat roiImgRight		= final(Rect(img1.cols+img2.cols,0,img3.cols,img3.rows));
+
+	Mat roiImg1 = img1(Rect(0,0,img1.cols,img1.rows));
+	Mat roiImg2 = img2(Rect(0,0,img2.cols,img2.rows));
+	Mat roiImg3 = img3(Rect(0,0,img3.cols,img3.rows));
+
+	roiImg1.copyTo(roiImgLeft);
+	roiImg2.copyTo(roiImgCenter);
+	roiImg3.copyTo(roiImgRight);
+
+	saveImage(final, "a.jpg");
 }
 
 void showImages(int count, ...) //Display the provided Mat images
@@ -129,25 +151,34 @@ Mat diffGauss(Mat origImg, Mat image, int kernel, int scale)
 {
 	Mat g1, g2, gray;
 	g1 = gaussBlur(image, kernel);
-	g2 = gaussBlur(image, scale * kernel);
+	g2 = gaussBlur(image, scale);
+	image = g1 - g2;
+	//normalize(image, image, 256);
 
-	int min = 255, max = -255;
+	//image = origImg + image;
+
+	/*int min = 255, max = -255;
 	for(int y = 0; y < image.rows; y++)
         for(int x = 0; x < image.cols; x++)
 		{
 			int p = (g1.at<uchar>(y,x) - g2.at<uchar>(y,x)) + origImg.at<uchar>(y,x);
+			if (p > 255)
+				p = 255;
+			if (p < 0)
+				p = 0;
+			image.at<uchar>(y,x) = p;
 			if (min > p)
 				min = p;
 			if (max < p)
 				max = p;
 		}
-	for(int y = 0; y < image.rows; y++)
+	/*for(int y = 0; y < image.rows; y++)
         for(int x = 0; x < image.cols; x++)
 		{
 			int p = (g1.at<uchar>(y,x) - g2.at<uchar>(y,x)) + origImg.at<uchar>(y,x);
 			image.at<uchar>(y,x) =  (uchar)((255.0/(max - min)) * (p - min));
 		}
-	cout << min << " : " << max << endl;
+	cout << min << " : " << max << endl;*/
 
 	/*
 	min = 255;
@@ -175,8 +206,8 @@ Mat diffGauss(Mat origImg, Mat image, int kernel, int scale)
 Mat medianThreshold(Mat image)
 {
 	image = convertToGray(image);
-	//threshold(image, image, 175, 255, CV_THRESH_BINARY);
-	threshold(image, image, findMedian(image), 255, CV_THRESH_BINARY);
+	threshold(image, image, 1, 255, CV_THRESH_BINARY);
+	//threshold(image, image, findMedian(image), 255, CV_THRESH_BINARY);
 	return image;
 }
 
@@ -279,6 +310,7 @@ int main( int argc, char** argv )
 		}
 	}
 
+	saveCombinedImage(colorImage, image, finalImage);
 	showImages(3, colorImage, image, finalImage);
 	return 0;
 }
