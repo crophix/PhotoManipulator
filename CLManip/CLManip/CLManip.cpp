@@ -6,17 +6,11 @@
 #include <iostream>
 #include <cstring>
 #include <cstdarg>
+#include <math.h>
+#include "StrokeList.h"
 
 using namespace cv;
 using namespace std;
-
-const int MAX_ARGS = 15;
-
-struct Method{
-	char	name;
-	int		kernel;
-	int		scale;
-};
 
 void showHelp(char arg)
 {
@@ -39,6 +33,8 @@ void showHelp(char arg)
 			if (arg == 'm') break;
 		case 'e': cout << " -e: Equalize histogram" << endl;
 			if (arg == 'e') break;
+		case 'p': cout << " -p: Painterly style" << endl;
+			if (arg == 'p') break;
 	}
 }
 
@@ -228,6 +224,81 @@ Mat scalePixels(Mat image)
 	return image;
 }
 
+Mat difference(Mat img1, Mat img2)
+{
+	Mat diff = Mat_<double>(img1.rows, img1.cols);
+
+	for(int y = 0; y < img1.rows; y++)
+	{
+        for(int x = 0; x < img1.cols; x++)
+		{
+			Vec3b a = img1.at<Vec3b>(y,x);
+			Vec3b b = img2.at<Vec3b>(y,x);
+
+			diff.at<double>(y,x) = pow(((a.val[0]-b.val[0])*(a.val[0]-b.val[0]))
+									+((a.val[1]-b.val[1])*(a.val[1]-b.val[1]))
+									+((a.val[2]-b.val[2])*(a.val[2]-b.val[2])), 0.5);
+		}
+	}
+	return diff;
+}
+
+void paintLayer(Mat canvas, Mat referenceImage, int brush)
+{
+	int T = 25;
+	int f = 1;
+
+	StrokeList S = StrokeList();
+	Mat diff = difference(canvas, referenceImage);
+
+	int gridSize = f* brush;
+
+	for (int y = 0; y < canvas.rows; y += gridSize)
+	{
+		for(int x = 0; x < canvas.cols; x += gridSize)
+		{
+			int bestx = 0, besty = 0, valDiff = 0;
+			double areaError = 0;
+			for (int i = max(0, y - (gridSize/2)); i < min(canvas.rows, y + (gridSize/2)); ++i)
+			{
+				for (int j = max(0, x - (gridSize/2)); j < min(canvas.cols, x + (gridSize/2)); ++j)
+				{
+					areaError += diff.at<double>(i,j);
+					if (diff.at<double>(i,j) > valDiff) {
+						valDiff = diff.at<double>(i,j);
+						besty = i;
+						bestx = j;
+					}
+				}
+			}
+			areaError = areaError / (gridSize*gridSize);
+			if (areaError > T) {
+				S.addStroke(brush, bestx, besty, referenceImage);
+			}
+		}
+	}
+	S.applyStrokes(canvas);
+}
+
+Mat paintImage(Mat orig, int count, ...)
+{
+	va_list ap;
+	va_start(ap, count);
+	Mat referenceImage;
+
+	Mat canvas = orig.clone();
+	invertImage(canvas);
+
+	for (int i = 0; i < count; i++)
+	{
+		int brush = va_arg(ap, int);
+
+		referenceImage = gaussBlur(orig, brush+1);
+		paintLayer(canvas, referenceImage, brush);
+	}
+	return canvas;
+}
+
 int main( int argc, char** argv )
 {
 	if ((argc <= 1) || argv[1][1] == 'h')
@@ -248,69 +319,42 @@ int main( int argc, char** argv )
         return -1;
     }
 
-	int chainLen = 0;				//The number of flags that are set, used for setting up the arguments
-	Method mList[MAX_ARGS];
 	for (int j=2; j < argc; j++)
 	{
 		if (argv[j][0] == '-') {
-			mList[chainLen].name = argv[j][1];
 			switch (argv[j][1])  //Adds the necessary arguments to the method
 			{
 			case 'g': 
-				mList[chainLen].kernel = atoi(argv[++j]); 
+				finalImage = gaussBlur(finalImage, atoi(argv[++j]));
 				break;
-			case 'i': 
+			case 'i':
+				invertImage(finalImage);
 				break;
 			case 'c': 
+				finalImage = convertToGray(finalImage);
 				break;
 			case 'd': 
-				mList[chainLen].kernel = atoi(argv[++j]);
-				mList[chainLen].scale = atoi(argv[++j]);
+				finalImage = convertToGray(finalImage);
+				finalImage = diffGauss(image, finalImage, atoi(argv[++j]), atoi(argv[++j]));
+				scalePixels(finalImage);
 				break;
 			case 't':
+				finalImage = medianThreshold(finalImage);
 				break;
 			case 'm':
-				mList[chainLen].kernel = atoi(argv[++j]);
+				medianBlur(finalImage, finalImage, atoi(argv[++j]));
 				break;
 			case 'e':
+				equalizeHist(finalImage, finalImage);
+				break;
+			case 'p':
+				 finalImage = paintImage(colorImage, 3, 8, 4, 2);
 				break;
 			}
-			chainLen++;
 		} else break;
 	}
 
-	for (int i = 0; i < chainLen; i++)
-	{
-		Mat g1, g2;
-		switch (mList[i].name)
-		{
-		case 'g':
-			finalImage = gaussBlur(finalImage, mList[i].kernel);
-			break;
-		case 'i':
-			invertImage(finalImage);
-			break;
-		case 'c': 
-			finalImage = convertToGray(finalImage);
-			break;
-		case 'd':
-			finalImage = convertToGray(finalImage);
-			finalImage = diffGauss(image, finalImage, mList[i].kernel, mList[i].scale);
-			scalePixels(finalImage);
-			break;
-		case 't':
-			finalImage = medianThreshold(finalImage);
-			break;
-		case 'm':
-			medianBlur(finalImage, finalImage, mList[i].kernel);
-			break;
-		case 'e':
-			equalizeHist(finalImage, finalImage);
-			break;
-		}
-	}
-
-	saveCombinedImage(colorImage, image, finalImage);
-	showImages(3, colorImage, image, finalImage);
+	//saveCombinedImage(colorImage, image, finalImage);
+	showImages(2, colorImage, finalImage);
 	return 0;
 }

@@ -18,5 +18,13 @@
     <ClCompile Include="CLManip.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StrokeList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StrokeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

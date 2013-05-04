@@ -77,6 +77,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CLManip.cpp" />
+    <ClCompile Include="StrokeList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StrokeList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
