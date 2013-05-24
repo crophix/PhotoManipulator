@@ -4,22 +4,28 @@
 using namespace cv;
 using namespace std;
 
-struct brushStroke
+const int	MAXSTROKELEN = 16;
+const int	MINSTROKELEN = 4;
+
+struct curvedStroke
 {
 	int		r;
-	Point	cntr;
+	Point	cntrList[MAXSTROKELEN];
 	Vec3b	color;
 };
 
 class StrokeList
 {
 public:
-	StrokeList(void);
+	StrokeList(Mat, Mat, int);
 	~StrokeList(void);
-	void addStroke(int, int, int, Mat);
-	int getCount();
-	void applyStrokes(Mat);
+	void addCurvedStroke(int, int, int, Mat, Mat);
+	void applyCurvedStrokes(Mat);
 private:
-	int count;
-	brushStroke* strokes;
+	int				maxStrokes;
+	curvedStroke*	strokes;
+	bool*			isFull;
+	Mat				xImg;
+	Mat				yImg;
+	Mat				diff;
 };
