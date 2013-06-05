@@ -3,6 +3,8 @@
 #include <opencv/cv.h>
 #include <opencv2/imgproc/imgproc.hpp>
 
+#define _USE_MATH_DEFINES
+
 #include <iostream>
 #include <cstring>
 #include <cstdarg>
@@ -28,6 +30,9 @@ void showHelp(char arg)
 		case 'c': cout << " -c: Convert to grayscale" << endl;
 			cout << "     Converts the image to grayscale using the built in OpenCV tool." << endl;
 			if (arg == 'c') break;
+		case 'C': cout << " -C: Salient preserving grayscale conversion" << endl;
+			cout << "     Converts the image to grayscale using nonlinear mapping" << endl;
+			if (arg == 'C') break;
 		case 'd': cout << " -d: Difference of Gaussian" << endl;
 			if (arg == 'd') break;
 		case 't': cout << " -t: Threshold" << endl;
@@ -273,12 +278,114 @@ Mat paintImage(Mat orig, int count, ...)
 Mat sharpenImage(Mat orig)
 {
 	Mat sharpImg;
+	int p = 10; // sets the emphasis placed on the edges
 
 	Mat g1 = gaussBlur(orig, 1);
-	Mat g2 = gaussBlur(orig, 7);
-	sharpImg = (11*g1) - (10*g2);
+	Mat g2 = gaussBlur(orig, 5);
+	sharpImg = ((p+1)*g1) - (p*g2);
 
 	return sharpImg;
+}
+
+Mat salientGrayscale(Mat image)
+{
+	// Implements "Robust Color-to-gray via Nonlinear Mapping"
+
+	// paramaters
+	double	alpha = 1.0; // Controls the emphasis on the color difference
+	int		n = 4;
+
+	Mat final;
+	cvtColor(image, final, CV_BGR2Lab); // convert to L*a*b* color space
+
+	// Compute Sobel derivatives
+	Mat greyImg, xImg, yImg;
+	cvtColor(image, greyImg, CV_BGR2GRAY);
+	Sobel(greyImg, xImg, CV_16S, 1, 0);
+	Sobel(greyImg, yImg, CV_16S, 0, 1);
+
+
+
+	cvtColor(final, final, CV_Lab2BGR); // convert back to BGR color space
+	return final;
+}
+
+Mat fastLinearGrayscale(Mat image)
+{
+	/* This is a linear greyscale mapping base on the following papers:
+
+	Lu, Chewu, et al. 2012 Real-time Contrast Preserving Decolorization.
+	Colo2Gray: Salience-Preserving Color Removal. Gooch et al. SIGGRAPH 05
+	*/
+	Mat final;
+	cvtColor(image, final, CV_BGR2GRAY);
+
+	//Generate the pool of pixel pairs and compute the color difference between each pair
+	int alpha = 15;
+	Mat labImg;
+	cvtColor(image, labImg, CV_BGR2Lab);
+	struct Pool {
+		Point	p1;
+		Point	p2;
+		uchar	d;
+	}pool[64*64];
+	for (int i = 0; i < 64*64; ++i)
+	{
+		pool[i].p1 = Point(rand()%image.cols, rand()%image.rows);
+		pool[i].p2 = Point(rand()%image.cols, rand()%image.rows);
+		Vec3b a = labImg.at<Vec3b>(pool[i].p1);
+		Vec3b b = labImg.at<Vec3b>(pool[i].p2);
+		double x = pow(((a.val[1]-b.val[1])*(a.val[1]-b.val[1]))
+					  +((a.val[2]-b.val[2])*(a.val[2]-b.val[2])),0.5);
+		pool[i].d = alpha * tanh(x/alpha);
+	}
+
+	// Find the linear grayscale transformation that maximizes the effect of color differences
+	double bestwb = 1.0, bestwg = 0.0, bestwr = 0.0;
+	double bestTotal = 0.0;
+	double wb = 1.0, wg = 0.0, wr = 0.0;
+
+	for (int b = 10; b >= 0; b -= 1)
+	{
+		for (int g = 0; g <= 10-b; g++)
+		{
+			wb = b / 10.0;
+			wg = g / 10.0;
+			wr = 1.0 - (wg + wb);
+			double sum = 0.0;
+			for (int i = 0; i < 64*64; ++i)
+			{
+				Vec3b a = image.at<Vec3b>(pool[i].p1);
+				Vec3b b = image.at<Vec3b>(pool[i].p2);
+				uchar g1 = (uchar) ((a.val[0]*wb) + (a.val[1]*wg) + (a.val[2]*wr));
+				uchar g2 = (uchar) ((b.val[0]*wb) + (b.val[1]*wg) + (b.val[2]*wr));
+				if (abs(g1-g2) > pool[i].d)
+					sum += abs(g1-g2);
+				else
+					sum += pool[i].d;
+			}
+			if (bestTotal == 0.0) bestTotal = sum;
+			if (bestTotal >= sum) 
+			{
+				bestTotal = sum;
+				bestwb = wb;
+				bestwg = wg;
+				bestwr = wr;
+				//cout  << sum << " : " << wb << " : " << wg << " : " << wr << endl;
+			}
+		}
+	}
+
+	for (int y = 0; y < final.rows; y++)
+	{
+		for(int x = 0; x < final.cols; x++)
+		{
+			Vec3b color = image.at<Vec3b>(y,x);
+			final.at<uchar>(y,x) = (uchar) ((color.val[0]*bestwb) + (color.val[1]*bestwg) + (color.val[2]*bestwr));
+		}
+	}
+	
+	return final;
 }
 
 int main( int argc, char** argv )
@@ -313,6 +420,12 @@ int main( int argc, char** argv )
 			case 'c': // Simple greyscale conversion using the built-in OpenCV tool
 				finalImage = convertToGray(finalImage);
 				break;
+			case 'C': // Salient preserving Greyscale conversion
+				finalImage = salientGrayscale(finalImage);
+				break;
+			case 'l':
+				finalImage = fastLinearGrayscale(finalImage);
+				break;
 			case 'd': 
 				k1 = atoi(argv[++j]);
 				k2 = atoi(argv[++j]);
@@ -337,8 +450,8 @@ int main( int argc, char** argv )
 		} else break;
 	}
 
-	//saveCombinedImage("a.jpg", 2, colorImage, finalImage);
-	//saveImage(finalImage, "painting.jpg");
+	//saveCombinedImage("sharpPaintFace.jpg", 2, colorImage, finalImage);
+	//saveImage(finalImage, "linGrey.jpg");
 	showImages(2, colorImage, finalImage);
 	return 0;
 }
