@@ -221,7 +221,7 @@ Mat difference(Mat img1, Mat img2)
 
 void paintLayer(Mat canvas, Mat referenceImage, int brush)
 {
-	int T	= 35;	// Threshold for if the area should have a stroke added
+	int T	= 40;	// Threshold for if the area should have a stroke added
 	float f = 1.0; // A scaling factor for the gridSize 
 
 	StrokeList S = StrokeList(referenceImage, canvas, brush);
@@ -259,8 +259,8 @@ Mat paintImage(Mat orig, int count, ...)
 	Mat referenceImage;
 
 	Mat canvas = orig.clone();
-	//canvas = Scalar(100, 100, 100);
-	invertImage(canvas);
+	canvas = Scalar(0, 0, 0);
+	//invertImage(canvas);
 
 	// paint a layer for each brush size provided
 	for (int i = 0; i < count; i++)
@@ -278,10 +278,10 @@ Mat paintImage(Mat orig, int count, ...)
 Mat sharpenImage(Mat orig)
 {
 	Mat sharpImg;
-	int p = 10; // sets the emphasis placed on the edges
+	int p = 20; // sets the emphasis placed on the edges
 
 	Mat g1 = gaussBlur(orig, 1);
-	Mat g2 = gaussBlur(orig, 5);
+	Mat g2 = gaussBlur(orig, 3);
 	sharpImg = ((p+1)*g1) - (p*g2);
 
 	return sharpImg;
@@ -321,7 +321,7 @@ Mat fastLinearGrayscale(Mat image)
 	cvtColor(image, final, CV_BGR2GRAY);
 
 	//Generate the pool of pixel pairs and compute the color difference between each pair
-	int alpha = 15;
+	int alpha = 10;
 	Mat labImg;
 	cvtColor(image, labImg, CV_BGR2Lab);
 	struct Pool {
@@ -450,8 +450,9 @@ int main( int argc, char** argv )
 		} else break;
 	}
 
-	//saveCombinedImage("sharpPaintFace.jpg", 2, colorImage, finalImage);
-	//saveImage(finalImage, "linGrey.jpg");
+	//Mat temp = openImage("paintFace.jpg");
+	saveCombinedImage("paintLGray2.jpg", 2, colorImage, finalImage);
+	//saveImage(finalImage, "paintFace.jpg");
 	showImages(2, colorImage, finalImage);
 	return 0;
 }

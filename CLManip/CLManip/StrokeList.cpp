@@ -14,14 +14,12 @@ StrokeList::StrokeList(Mat referenceImage, Mat canvas, int brushSize)
 {
 	maxStrokes = ((referenceImage.cols / brushSize)+1)* ((referenceImage.rows / brushSize)+1);
 	strokes = new curvedStroke[maxStrokes];
-	isFull = new bool[maxStrokes];
-	for (int i = 0; i < maxStrokes; ++i)
-		isFull[i] = false;
 	Mat greyImg;
 	cvtColor(referenceImage, greyImg, CV_BGR2GRAY);
 	Sobel(greyImg, xImg, CV_16S, 1, 0);
 	Sobel(greyImg, yImg, CV_16S, 0, 1);
 	absdiff(referenceImage, canvas, diff);
+	count = 0;
 }
 
 StrokeList::~StrokeList(void)
@@ -31,22 +29,18 @@ StrokeList::~StrokeList(void)
 void StrokeList::addCurvedStroke(int radius, int x, int y, Mat referenceImage, Mat canvas)
 {
 	// select a random point in the sequence of strokes and put the new stroke there
-	int j = rand() % maxStrokes;
-	while (isFull[j])
-		j = rand() % maxStrokes;
-	strokes[j].r = radius;
-	strokes[j].color = referenceImage.at<Vec3b>(y,x);
-	strokes[j].cntrList[0] = Point(x,y); // first point in the curve
+	strokes[count].r = radius;
+	strokes[count].color = referenceImage.at<Vec3b>(y,x);
+	strokes[count].cntrList[0] = Point(x,y); // first point in the curve
 	for (int i = 1; i < MAXSTROKELEN; ++i)
-		strokes[j].cntrList[i] = Point(-1,-1);
-	isFull[j] = true;
+		strokes[count].cntrList[i] = Point(-1,-1);
 	
 	// Setup the starting point at the given coordinate
 	Point	cur		= Point(x,y);
 	double	lastx	= 0.0;
 	double	lasty	= 0.0;
 	Mat d2;
-	absdiff(referenceImage, Scalar(strokes[j].color), d2);
+	absdiff(referenceImage, Scalar(strokes[count].color), d2);
 	for (int i = 1; i < MAXSTROKELEN; ++i)
 	{
 		if (i >= MINSTROKELEN)
@@ -75,24 +69,37 @@ void StrokeList::addCurvedStroke(int radius, int x, int y, Mat referenceImage, M
 		cur = Point(tempx, tempy);
 		lastx = deltax;
 		lasty = deltay;
-		strokes[j].cntrList[i] = cur;
+		strokes[count].cntrList[i] = cur;
 	}
+
+	if (count > 1)
+	{
+		int j = rand() % count;
+		curvedStroke temp = strokes[j];
+		strokes[j] = strokes[count];
+		strokes[count] = temp;
+		/*strokes[count].color = strokes[j].color;
+		strokes[count].r = strokes[j].r;
+		strokes[count].color = strokes[j].color;
+		for (int i = 0; i < MAXSTROKELEN; ++i)
+			strokes[count].cntrList[i] = strokes[j].cntrList[i];*/
+	}
+	count++;
 }
 
 void StrokeList::applyCurvedStrokes(Mat canvas)
 {
 	// For each stroke in our list connect the points with a line of the correct width
-	for (int i = 0; i < maxStrokes; ++i)
+	for (int i = 0; i < count; ++i)
 	{
-		if (isFull[i])
+		if (strokes[i].cntrList[1].x == -1)
+			circle(canvas, strokes[i].cntrList[0], strokes[i].r, Scalar(strokes[i].color), -1, 8);
+		else
 		{
-			if (strokes[i].cntrList[1].x == -1)
-				circle(canvas, strokes[i].cntrList[0], strokes[i].r, Scalar(strokes[i].color), -1, 8);
-			int j = 1;
-			while ((j < MAXSTROKELEN) && (strokes[i].cntrList[j].x != -1))
+			for (int j = 1; j < MAXSTROKELEN; ++j)
 			{
+				if (strokes[i].cntrList[j].x == -1) break;
 				line(canvas, strokes[i].cntrList[j-1], strokes[i].cntrList[j], Scalar(strokes[i].color), strokes[i].r);
-				j++;
 			}
 		}
 	}

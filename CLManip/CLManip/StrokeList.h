@@ -24,8 +24,8 @@ public:
 private:
 	int				maxStrokes;
 	curvedStroke*	strokes;
-	bool*			isFull;
 	Mat				xImg;
 	Mat				yImg;
 	Mat				diff;
+	int				count;
 };
