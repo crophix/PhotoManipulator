@@ -1,0 +1,41 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{authblk}
+\usepackage[margin=1.0in]{geometry}
+
+\author{Daniel Leblanc}
+\affil{Maseeh College of Engineering and Computer Science\\Portland State University\\Portland, OR}
+\title{Simple Command-Line Artistic Toolset Implemented using OpenCV}
+\date{June 12, 2013}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+To be added.
+\end{abstract}
+
+\section{Introduction}
+	\paragraph{}Many different methods for creating non-photorealistic renderings of images in various styles have been created.  We have implemented several of these styles and examined the results, as well as the results when multiple methods are combined.  The three techniques we have concentrated on are image sharpening using the extended difference of Gaussians by Holger Winnem{\"o}ller, Jan Eric Kyprianidis,  and Sven C. Olsen, \cite{ Winnemoeller:2012:XED}, painterly renderings with curved brush strokes by Aaron Hertzmann \cite{Hertzmann:1998:PRC:280814.280951}, and a salient preserving grayscale that is based on the works of Amy Gooch, Sven Olsen, Jack Tumblin, and Bruce Gooch, \cite{Gooch05color2gray:salience-preserving} and Chewu Lu, Li Xu and Jiaya Jia \cite{ lu:real-time}.
+	\paragraph{} All techniques have been implemented using C++ and the OpenCV library.  The current design is a command-line interface that allows manipulation of the various parameters used by the different techniques.
+
+\section{Image Sharpening}
+	\paragraph{} While the Winnem{\"o}ller paper demonstrates numerous powerful techniques that can be implemented using their extended difference of gaussian technique, we have implemented only their image sharpening here.  Other techniques such as crosshatching, flow extended difference of gaussian, and visual abstraction\cite{Winnemoeller:2012:XED} have been left as future excercises.
+
+\section{Painterly Styles}
+	\paragraph{}
+
+\section{Salient Preserving Greyscale}
+	\paragraph{}
+
+\section{Combined Results}
+	\paragraph{}
+
+\section{Conclusion and Future Work}
+	\paragraph{}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{citations}
+
+\end{document}
+

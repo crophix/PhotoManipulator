@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{Gooch05color2gray:salience-preserving}
+Amy~A. Gooch, Sven~C. Olsen, Jack Tumblin, and Bruce Gooch.
+\newblock Color2gray: Salience-preserving color removal.
+\newblock {\em ACM Transactions on Graphics}, 24:634--639, 2005.
+
+\bibitem{Hertzmann:1998:PRC:280814.280951}
+Aaron Hertzmann.
+\newblock Painterly rendering with curved brush strokes of multiple sizes.
+\newblock SIGGRAPH '98, pages 453--460. ACM, 1998.
+
+\bibitem{lu:real-time}
+Cewu Lu, Li~Xu, and Jiaya Jia.
+\newblock Real-time contrast preserving decolorization.
+\newblock In {\em SIGGRAPH ASIA Posters'12}, pages 16--16, 2012.
+
+\bibitem{Winnemoeller:2012:XED}
+Holger Winnem{\"o}ller, Jan~Eric Kyprianidis, and Sven~C. Olsen.
+\newblock Xdog: An extended difference-of-gaussians compendium including
+  advanced image stylization.
+\newblock {\em Computers \& Graphics}, 36(6):740--753, 2012.
+
+\end{thebibliography}
