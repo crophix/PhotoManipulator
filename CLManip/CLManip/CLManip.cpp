@@ -304,7 +304,7 @@ Mat salientGrayscale(Mat image)
 	Sobel(greyImg, xImg, CV_16S, 1, 0);
 	Sobel(greyImg, yImg, CV_16S, 0, 1);
 
-
+	//Still to be implemented
 
 	cvtColor(final, final, CV_Lab2BGR); // convert back to BGR color space
 	return final;
@@ -450,9 +450,9 @@ int main( int argc, char** argv )
 		} else break;
 	}
 
-	//Mat temp = openImage("paintFace.jpg");
-	saveCombinedImage("paintLGray2.jpg", 2, colorImage, finalImage);
-	//saveImage(finalImage, "paintFace.jpg");
+	//Mat temp = openImage("paintface20.jpg");
+	//saveCombinedImage("medianpaint.jpg", 2, temp, finalImage);
+	saveImage(finalImage, "grayPl.jpg");
 	showImages(2, colorImage, finalImage);
 	return 0;
 }

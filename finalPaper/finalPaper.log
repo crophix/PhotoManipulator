@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.6.10)  11 JUN 2013 12:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.6.10)  12 JUN 2013 07:49
 entering extended mode
-**finalPaper.tex
-(C:\Users\Daniel\Documents\GitHub\PhotoManipulator\finalPaper\finalPaper.tex
+**C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/finalPaper.tex
+(C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/finalPaper.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -38,13 +38,389 @@ Package: authblk 2001/02/27 1.3 (PWD)
 \c@authors=\count88
 \c@affil=\count89
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
+y (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon.tex
+\pgfutil@everybye=\toks14
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
+atex.def
+\pgfutil@abb=\box26
+ (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.co
+de.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.st
+y ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.st
+y
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.
+code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
+ltered.code.tex
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen105
+\pgf@y=\dimen106
+\pgf@xa=\dimen107
+\pgf@ya=\dimen108
+\pgf@xb=\dimen109
+\pgf@yb=\dimen110
+\pgf@xc=\dimen111
+\pgf@yc=\dimen112
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count91
+\c@pgf@countb=\count92
+\c@pgf@countc=\count93
+\c@pgf@countd=\count94
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
+oftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count95
+\pgfsyssoftpath@bigbuffer@items=\count96
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
+rotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.
+code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.co
+de.tex
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
+de.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
+code.tex
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count97
+\pgfmath@box=\box27
+\pgfmath@toks=\toks19
+\pgfmath@stack@operand=\toks20
+\pgfmath@stack@operation=\toks21
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.code.tex
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.basic.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.trigonometric.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.random.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.comparison.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.base.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.round.code.tex)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.misc.code.tex)))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
+ode.tex
+\c@pgfmathroundto@lastzeros=\count98
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+oints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen114
+\pgf@picmaxx=\dimen115
+\pgf@picminy=\dimen116
+\pgf@picmaxy=\dimen117
+\pgf@pathminx=\dimen118
+\pgf@pathmaxx=\dimen119
+\pgf@pathminy=\dimen120
+\pgf@pathmaxy=\dimen121
+\pgf@xx=\dimen122
+\pgf@xy=\dimen123
+\pgf@yx=\dimen124
+\pgf@yy=\dimen125
+\pgf@zx=\dimen126
+\pgf@zy=\dimen127
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen128
+\pgf@path@lasty=\dimen129
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen130
+\pgf@shorten@start@additional=\dimen131
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+copes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count99
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
+raphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen132
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen133
+\pgf@pt@y=\dimen134
+\pgf@pt@temp=\dimen135
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreq
+uick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreo
+bjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorea
+rrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+hade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen136
+\pgf@sys@shading@range@num=\count100
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
+mage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
+xternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box31
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
+ayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+atterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
+apes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box32
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
+ot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen137
+\pgf@nodesepend=\dimen138
+)
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.sty
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
+de.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen139
+\pgffor@skip=\dimen140
+\pgffor@stack=\toks22
+\pgffor@toks=\toks23
+))
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count101
+\pgfplotmarksize=\dimen141
+)
+\tikz@lastx=\dimen142
+\tikz@lasty=\dimen143
+\tikz@lastxsaved=\dimen144
+\tikz@lastysaved=\dimen145
+\tikzleveldistance=\dimen146
+\tikzsiblingdistance=\dimen147
+\tikz@figbox=\box33
+\tikz@tempbox=\box34
+\tikztreelevel=\count102
+\tikznumberofchildren=\count103
+\tikznumberofcurrentchild=\count104
+\tikz@fig@count=\count105
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
+trix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count106
+\pgfmatrixcurrentcolumn=\count107
+\pgf@matrix@numberofcolumns=\count108
+)
+\tikz@expandcount=\count109
+
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen148
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen149
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count110
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count111
+\leftroot@=\count112
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count113
+\DOTSCASE@=\count114
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box35
+\strutbox@=\box36
+\big@size=\dimen150
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
+\dotsspace@=\muskip10
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
+\tag@help=\toks25
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
+\andhelp@=\toks26
+\eqnshift@=\dimen151
+\alignsep@=\dimen152
+\tagshift@=\dimen153
+\tagwidth@=\dimen154
+\totwidth@=\dimen155
+\lineht@=\dimen156
+\@envbody=\toks27
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -56,34 +432,49 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count90
-\Gm@cntv=\count91
-\c@Gm@tempcnt=\count92
-\Gm@bindingoffset=\dimen103
-\Gm@wd@mp=\dimen104
-\Gm@odd@mp=\dimen105
-\Gm@even@mp=\dimen106
-\Gm@layoutwidth=\dimen107
-\Gm@layoutheight=\dimen108
-\Gm@layouthoffset=\dimen109
-\Gm@layoutvoffset=\dimen110
-\Gm@dimlist=\toks15
+\Gm@cnth=\count122
+\Gm@cntv=\count123
+\c@Gm@tempcnt=\count124
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
+\Gm@dimlist=\toks29
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 (C:\Users\Daniel\Documents\GitHub\PhotoManipulator\finalPaper\finalPaper.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
+ABD: EveryShipout initializing macros
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count125
+\scratchdimen=\dimen165
+\scratchbox=\box37
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen166
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks31
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -92,15 +483,15 @@ LaTeX Font Info:    ... okay on input line 10.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=505.89pt
+* \textheight=686.56499pt
+* \oddsidemargin=-18.06749pt
+* \evensidemargin=-18.06749pt
+* \topmargin=-55.06749pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -118,44 +509,189 @@ LaTeX Font Info:    ... okay on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+<test3.jpg, id=4, 96.36pt x 171.5208pt>
+File: test3.jpg Graphic file (type jpg)
+ <use test3.jpg>
+Package pdftex.def Info: test3.jpg used on input line 35.
+(pdftex.def)             Requested size: 75.8804pt x 135.06548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
- [] \OT1/cmr/m/n/10 Many dif-fer-ent meth-ods for cre-at-ing non-
+<sharpface10.jpg, id=5, 401.5pt x 714.67pt>
+File: sharpface10.jpg Graphic file (type jpg)
+ <use sharpface10.jpg>
+Package pdftex.def Info: sharpface10.jpg used on input line 39.
+(pdftex.def)             Requested size: 75.8804pt x 135.06897pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]\OT1/cmr/m/n/10 Figure 2:
  []
 
+<sharpface.jpg, id=6, 401.5pt x 714.67pt>
+File: sharpface.jpg Graphic file (type jpg)
+ <use sharpface.jpg>
+Package pdftex.def Info: sharpface.jpg used on input line 43.
+(pdftex.def)             Requested size: 75.8804pt x 135.06897pt.
 
-Underfull \hbox (badness 5817) in paragraph at lines 18--19
-\OT1/cmr/m/n/10 photorealistic ren-der-ings of im-ages in var-i-ous
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]\OT1/cmr/m/n/10 Figure 3:
  []
 
-
-Underfull \hbox (badness 1418) in paragraph at lines 18--19
-\OT1/cmr/m/n/10 ren-der-ings with curved brush strokes by Aaron
- []
-
-(C:\Users\Daniel\Documents\GitHub\PhotoManipulator\finalPaper\finalPaper.bbl)
 [1{C:/Users/Daniel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-]
+ <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/test3.jpg> <C:/U
+sers/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharpface10.jpg> <C:/U
+sers/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharpface.jpg>]
+<test2.jpg, id=19, 416.55624pt x 471.7625pt>
+File: test2.jpg Graphic file (type jpg)
+ <use test2.jpg>
+Package pdftex.def Info: test2.jpg used on input line 53.
+(pdftex.def)             Requested size: 75.8804pt x 85.93576pt.
+
+<sharp10.jpg, id=20, 416.55624pt x 471.7625pt>
+File: sharp10.jpg Graphic file (type jpg)
+ <use sharp10.jpg>
+Package pdftex.def Info: sharp10.jpg used on input line 57.
+(pdftex.def)             Requested size: 75.8804pt x 85.93576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+[]\OT1/cmr/m/n/10 Figure 5:
+ []
+
+<sharp20.jpg, id=21, 416.55624pt x 471.7625pt>
+File: sharp20.jpg Graphic file (type jpg)
+ <use sharp20.jpg>
+Package pdftex.def Info: sharp20.jpg used on input line 61.
+(pdftex.def)             Requested size: 75.8804pt x 85.93576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]\OT1/cmr/m/n/10 Figure 6:
+ []
+
+<sharpcrop.jpg, id=22, 149.8097pt x 158.84344pt>
+File: sharpcrop.jpg Graphic file (type jpg)
+ <use sharpcrop.jpg>
+Package pdftex.def Info: sharpcrop.jpg used on input line 68.
+(pdftex.def)             Requested size: 227.64894pt x 241.39606pt.
+
+<test6.jpg, id=23, 401.5pt x 301.125pt>
+File: test6.jpg Graphic file (type jpg)
+ <use test6.jpg>
+Package pdftex.def Info: test6.jpg used on input line 77.
+(pdftex.def)             Requested size: 227.64894pt x 170.74245pt.
+
+<paintDeer1.jpg, id=24, 1003.75pt x 752.8125pt>
+File: paintDeer1.jpg Graphic file (type jpg)
+ <use paintDeer1.jpg>
+Package pdftex.def Info: paintDeer1.jpg used on input line 81.
+(pdftex.def)             Requested size: 227.64894pt x 170.73096pt.
+
+<paintDeer2.jpg, id=25, 1003.75pt x 752.8125pt>
+File: paintDeer2.jpg Graphic file (type jpg)
+ <use paintDeer2.jpg>
+Package pdftex.def Info: paintDeer2.jpg used on input line 85.
+(pdftex.def)             Requested size: 227.64894pt x 170.73096pt.
+
+<paintDeer.jpg, id=26, 1003.75pt x 752.8125pt>
+File: paintDeer.jpg Graphic file (type jpg)
+ <use paintDeer.jpg>
+Package pdftex.def Info: paintDeer.jpg used on input line 89.
+(pdftex.def)             Requested size: 227.64894pt x 170.73096pt.
+File: test3.jpg Graphic file (type jpg)
+
+<use test3.jpg>
+Package pdftex.def Info: test3.jpg used on input line 98.
+(pdftex.def)             Requested size: 121.41637pt x 216.11995pt.
+ <pfacebasic.jpg, id=27, 401.5pt x 714.67pt>
+File: pfacebasic.jpg Graphic file (type jpg)
+
+<use pfacebasic.jpg>
+Package pdftex.def Info: pfacebasic.jpg used on input line 102.
+(pdftex.def)             Requested size: 121.41637pt x 216.11473pt.
+ [2 <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/test2.jpg> <C
+:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharp10.jpg> <C:/Us
+ers/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharp20.jpg> <C:/Users/
+Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharpcrop.jpg> <C:/Users/Da
+niel/Documents/GitHub/PhotoManipulator/finalPaper/test6.jpg> <C:/Users/Daniel/D
+ocuments/GitHub/PhotoManipulator/finalPaper/paintDeer1.jpg>] <greyC.jpg, id=31,
+ 833.1125pt x 471.7625pt>
+File: greyC.jpg Graphic file (type jpg)
+ <use greyC.jpg>
+Package pdftex.def Info: greyC.jpg used on input line 121.
+(pdftex.def)             Requested size: 227.64894pt x 128.90366pt.
+
+<greyL.jpg, id=32, 833.1125pt x 471.7625pt>
+File: greyL.jpg Graphic file (type jpg)
+ <use greyL.jpg>
+Package pdftex.def Info: greyL.jpg used on input line 126.
+(pdftex.def)             Requested size: 227.64894pt x 128.90366pt.
+ [3 <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/paintDeer2.jp
+g> <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/paintDeer.jpg>
+ <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/pfacebasic.jpg>]
+
+<sharppaint10.jpg, id=37, 603.75563pt x 537.50812pt>
+File: sharppaint10.jpg Graphic file (type jpg)
+ <use sharppaint10.jpg>
+Package pdftex.def Info: sharppaint10.jpg used on input line 136.
+(pdftex.def)             Requested size: 227.64894pt x 202.66408pt.
+
+<medianpaint.jpg, id=38, 803.0pt x 714.67pt>
+File: medianpaint.jpg Graphic file (type jpg)
+ <use medianpaint.jpg>
+Package pdftex.def Info: medianpaint.jpg used on input line 141.
+(pdftex.def)             Requested size: 227.64894pt x 202.60347pt.
+
+<all3.jpg, id=39, 724.44145pt x 411.85193pt>
+File: all3.jpg Graphic file (type jpg)
+ <use all3.jpg>
+Package pdftex.def Info: all3.jpg used on input line 149.
+(pdftex.def)             Requested size: 227.64894pt x 129.41982pt.
+
+<smoothpaintdeer.jpg, id=40, 1003.75pt x 752.8125pt>
+File: smoothpaintdeer.jpg Graphic file (type jpg)
+ <use smoothpaintdeer.jpg>
+Package pdftex.def Info: smoothpaintdeer.jpg used on input line 155.
+(pdftex.def)             Requested size: 227.64894pt x 170.73096pt.
+
+<grayPc.jpg, id=41, 1003.75pt x 752.8125pt>
+File: grayPc.jpg Graphic file (type jpg)
+ <use grayPc.jpg>
+Package pdftex.def Info: grayPc.jpg used on input line 160.
+(pdftex.def)             Requested size: 227.64894pt x 170.73096pt.
+ [4 <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/greyC.jpg> <C
+:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/greyL.jpg> <C:/User
+s/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/sharppaint10.jpg> <C:/Use
+rs/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/medianpaint.jpg> <C:/Use
+rs/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/all3.jpg>]
+(C:\Users\Daniel\Documents\GitHub\PhotoManipulator\finalPaper\finalPaper.bbl
+Underfull \hbox (badness 2027) in paragraph at lines 19--23
+[]\OT1/cmr/m/n/10 Holger Win-nemoller, Jan Eric Kypri-an-i-dis, and
+ []
+
+) [5 <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/smoothpaintd
+eer.jpg> <C:/Users/Daniel/Documents/GitHub/PhotoManipulator/finalPaper/grayPc.j
+pg>]
 (C:\Users\Daniel\Documents\GitHub\PhotoManipulator\finalPaper\finalPaper.aux) )
  
 Here is how much of TeX's memory you used:
- 819 strings out of 493921
- 11608 string characters out of 3147279
- 68752 words of memory out of 3000000
- 4164 multiletter control sequences out of 15000+200000
- 5496 words of font info for 20 fonts, out of 3000000 for 9000
+ 10630 strings out of 493921
+ 198998 string characters out of 3147279
+ 246694 words of memory out of 3000000
+ 13718 multiletter control sequences out of 15000+200000
+ 5950 words of font info for 22 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,4n,32p,849b,213s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,8n,55p,1032b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti10.pfb>
-Output written on finalPaper.pdf (1 page, 82825 bytes).
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on finalPaper.pdf (5 pages, 3656592 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
